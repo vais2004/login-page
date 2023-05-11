@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, red, orange, palevioletred, black, darkmagenta);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.container{
+    width: 400px;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    opacity: 80%;
+}
+
+.container .inputs{
+    height: 40px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.container .inputs input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid gray;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.container .inputs input:focus{
+    border-color: crimson;
+}
+
+.container .inputs label{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    pointer-events: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.container .inputs input:focus ~ label,
+.container .inputs input:valid ~ label{
+    transform: translateY(-23px);
+    color: crimson;
+}
+
+button{
+    height: 40px;
+    width: 30%;
+    cursor: pointer;
+    border: green;
+    background-color: green;
+    color: white;
+    border-radius: 6px;
+}
+
+h3{
+    top: -20px;
+    position: relative;
+    left: 21vh;
+    font-size: 20px;
+}
